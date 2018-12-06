@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>    
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item [matMenuTriggerFor] = "loginMenu">Login/Signup</button>
+      <button mat-menu-item>Politics</button>
+      <button mat-menu-item>Culture & Lifestyle
+        </button>
+        <button mat-menu-item>Entertainment
+          </button>
+      <button mat-menu-item>Sports</button>
+      <button mat-menu-item>Food</button>
+      <button mat-menu-item>People
+        </button>
+        <button mat-menu-item>Business & Economy
+          </button>
+      <button mat-menu-item>Humour</button>
+    </mat-menu>
+    <mat-menu #loginMenu = "matMenu">
+        <button mat-menu-item>Login</button>
+        <button mat-menu-item>Signup</button>
+    </mat-menu>
+    
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      <mat-icon class="example-icon">menu</mat-icon>
+    </button>
+
+    <span>Poll Birds</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar-row>
+
