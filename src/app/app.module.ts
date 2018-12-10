@@ -11,7 +11,6 @@ import { MainPageComponent } from './main-page/main-page.component';
   declarations: [
     AppComponent,
     MainPageComponent
-    
   ],
   imports: [
     BrowserModule,

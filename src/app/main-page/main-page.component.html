@@ -1,31 +1,42 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>    
-    <mat-menu #appMenu="matMenu">
-      <button mat-menu-item [matMenuTriggerFor] = "loginMenu">Login/Signup</button>
-      <button mat-menu-item>Politics</button>
-      <button mat-menu-item>Culture & Lifestyle
-        </button>
-        <button mat-menu-item>Entertainment
-          </button>
-      <button mat-menu-item>Sports</button>
-      <button mat-menu-item>Food</button>
-      <button mat-menu-item>People
-        </button>
-        <button mat-menu-item>Business & Economy
-          </button>
-      <button mat-menu-item>Humour</button>
-    </mat-menu>
-    <mat-menu #loginMenu = "matMenu">
-        <button mat-menu-item>Login</button>
-        <button mat-menu-item>Signup</button>
-    </mat-menu>
-    
-    <button mat-icon-button [matMenuTriggerFor]="appMenu">
-      <mat-icon class="example-icon">menu</mat-icon>
-    </button>
 
-    <span>Poll Birds</span>
-    <span class="example-spacer"></span>
-  </mat-toolbar-row>
-  <h1>In Progress</h1>
+  <mat-sidenav-container class="example-container" >
+
+      <mat-sidenav #sidenav mode = "side" class="sidenav">
+          <mat-toolbar>
+              Settings
+            </mat-toolbar>
+          <button mat-button>Login/Signup</button><br>
+          <button mat-button>Politics</button><br>
+          <button mat-button>Culture & Lifestyle</button><br>
+          <button mat-button>Entertainment</button><br>
+          <button mat-button>Sports</button><br>
+          <button mat-button>Food</button><br>
+          <button mat-button>People</button><br>
+          <button mat-button>Business & Economy</button><br>
+          <button mat-button>Humour</button>
+   </mat-sidenav>
+   <mat-sidenav-content>
+    <mat-toolbar class="toolbar">
+
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon class="example-icon">menu</mat-icon>
+        </button>
+        &nbsp;
+            <span>Poll Birds</span>
+            <span class="example-spacer"></span>
+              <mat-form-field appearance = "Outline"class="searchbar">
+                  <input type="search" matInput placeholder="Search">
+                  <button mat-button matSuffix>
+                    <mat-icon >search</mat-icon></button>
+              </mat-form-field>
+              <span class="example-spacer"></span>
+              <button mat-button>
+                <mat-icon>account_circle</mat-icon>
+              </button>
+
+      </mat-toolbar-row>
+    </mat-toolbar>
+   </mat-sidenav-content>
+   </mat-sidenav-container>
 
